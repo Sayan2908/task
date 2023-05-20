@@ -11,7 +11,7 @@ const Container =  styled.div`
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
     gap: 0.86vw;
 
-    width: 38.095vw;
+    width: 40vw;
     z-index: 999;
 `
 
@@ -39,6 +39,7 @@ const Header = styled.div`
     font-weight: 400;
     text-align: center;
     margin: 0;
+    color: white;
 `
 
 const DueCard = (props) => {
@@ -55,29 +56,31 @@ const DueCard = (props) => {
 
   return (
     <Container>
+        <div style={{width: "20vw"}} >
         <Text>
             Last 30 Days:
         </Text>
+        </div>
         <Box
             widthpercent = {paidpercent}
             color='#48C446'
         >
             <Header>PAID</Header>
-            <Text>${props.paid}</Text>
+            <Text>€{props.paid}</Text>
         </Box>
         <Box
             widthpercent = {pendingpercent}
             color='#BDBDBD'
         >
             <Header>PENDING</Header>
-            <Text>${props.pending}</Text>
+            <Text>€{props.pending}</Text>
         </Box>
         <Box
             widthpercent = {overduepercent}
             color='#EC615B'
         >
             <Header>OVERDUE</Header>
-            <Text>${props.overdue}</Text>
+            <Text>€{props.overdue}</Text>
         </Box>
     </Container>
   )

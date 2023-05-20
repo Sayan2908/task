@@ -29,7 +29,7 @@ const TopBox = styled.div`
     height: 10.25vw;
     background-color: #D9D9D9;
     background-image: url("/Fill.png");
-    mix-blend-mode: hard-light;
+    background-blend-mode: hard-light;
 `
 
 const ProfileDetails = styled.div`
@@ -52,7 +52,7 @@ const InvoicesLine = styled.div`
 `
 
 const Button = styled.button`
-    width: 17.32vw;
+    width: 19vw;
     height: 4.1vw;
 
     background-color: black;
@@ -63,10 +63,12 @@ const Button = styled.button`
     align-items: center;
     padding: 1.38vw 2.71vw;
     gap: 0.6vw; 
-    border-radius: 0.3vw; 
+    border-radius: 0.3vw;
+    border : none;
 
     font-size: 1.058vw;
     font-weight: 400;
+    cursor: pointer;
 `
 
 const HeadingText = styled.div`
@@ -127,23 +129,26 @@ const page = () => {
                 <DueCard paid={41} pending={35} overdue={65} />
                 <Profile/>
             </ProfileDetails>
+            <br></br>
+            <br></br>
+            <br></br>
         <Invoices>
             <InvoicesLine>
                 <HeadingText>
-                    RECURRING INVOICES
+                    Recurring Invoices
                 </HeadingText>
                 <Button>
-                    Add Recurring Invoice  +
+                    Add Recurring Invoice &nbsp; +
                 </Button>
             </InvoicesLine>
             <InvoicesLine>
                 <Box>
                     <div className="topic">#RECURRING INVOICES</div>
-                    <div className="value">$250</div>
+                    <div className="value">€250</div>
                 </Box>
                 <Box>
                     <div className="topic">#RECURRING REVENUE</div>
-                    <div className="value">$2500/month</div>
+                    <div className="value">€2500/month</div>
                 </Box>
                 <Box>
                     <div className="topic">#RECURRING OVERDUE</div>
@@ -155,6 +160,8 @@ const page = () => {
             Per Client
         </Topic>
         <Perclient/>
+        <br />
+        <br />
     </Container>
     </Contents>
   )

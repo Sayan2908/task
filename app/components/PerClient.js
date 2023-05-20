@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useTable } from 'react-table';
 import { useMemo } from 'react';
+import Image from 'next/image';
 
 const Container = styled.div`
     display: flex;
@@ -116,39 +117,39 @@ const Perclient = () => {
             send: "25",
             enddate: "24-20-2024",
             interval: "3/month",
-            amount: "$3000",
+            amount: "€3000",
         },
         {
             id : 2,
             client : "MadeByMack",
             send: "25",
             enddate: "24-20-2024",
-            interval: "3/month",
-            amount: "$3000",
+            interval: "2/month",
+            amount: "€3000",
         },
         {
             id : 3,
             client : "MadeByMack",
             send: "25",
             enddate: "24-20-2024",
-            interval: "3/month",
-            amount: "$3000",
+            interval: "1/month",
+            amount: "€3000",
         },
         {
             id : 4,
             client : "MadeByMack",
             send: "25",
             enddate: "24-20-2024",
-            interval: "3/month",
-            amount: "$3000",
+            interval: "5/month",
+            amount: "€3000",
         },
         {
             id : 5,
             client : "MadeByMack",
             send: "25",
             enddate: "24-20-2024",
-            interval: "3/month",
-            amount: "$3000",
+            interval: "1/month",
+            amount: "€3000",
         },
     ];
 
@@ -156,7 +157,14 @@ const Perclient = () => {
         {
             Header: "CLIENT",
             accessor: "client",
-            Cell: ({ value }) => (<div>{value}</div>),
+            Cell: ({ value }) => (
+            <div style={{display: "flex",alignItems: "center"}} >
+                <div style={{width: "4vw",height: "3vw",position: "relative"}} >
+                <Image src="/Avatar.svg" alt="Logo" layout="fill" objectFit="contain" />
+                </div>
+                &nbsp;
+                {value}
+            </div>),
         },
         {
             Header: "# SEND",

@@ -48,39 +48,57 @@ const MenuItem = styled.a`
 const Header = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    position: relative;
 `
 
 const Sidebar = () => {
   return (
     <Container>
         <Header>
-          <Image src="/Logo.png" alt="Logo" width={104} height={35}/>
+            <div style={{width: "2.5vw",height: "2.5vw",position: "absolute", left: "-3.2vw", top: "0.2vw", cursor: "pointer"}} >
+                <Image src="/Back.svg" alt="Menu" layout="fill" objectFit="contain"/>
+            </div>
+            <div style={{width: "7vw",height: "3vw",position: "relative",marginLeft: "1vw"}} >
+                <Image src="/Logo.svg" alt="Logo" layout="fill" objectFit="contain"/>
+            </div>
         </Header>
         <Menu>
             <MenuItem href="#">
-                <Image src="/home.png" alt="New" width={20} height={20}/>
+                <div style={{width: "1.3vw",height: "1.3vw",position: "relative"}} >
+                <Image src="/home.svg" alt="New" layout="fill" objectFit="contain"/>
+                </div>
                 Home
             </MenuItem>
             <MenuItem href="#">
-                <Image src="/Invoices.png" alt="Invoices" width={20} height={20}/>
+                <div style={{width: "1.3vw",height: "1.3vw",position: "relative"}} >
+                <Image src="/Invoices.svg" alt="Invoices" layout="fill" objectFit="contain"/>
+                </div>
                 Invoices
             </MenuItem>
             <MenuItem href="#">
-                <Image src="/Customers.png" alt="Clients" width={20} height={20}/>
+                <div style={{width: "1.3vw",height: "1.3vw",position: "relative"}} >
+                <Image src="/Customers.svg" alt="Clients" layout="fill" objectFit="contain"/>
+                </div>
                 Customers
             </MenuItem>
             <MenuItem href="#">
-                <Image src="/Products.png" alt="Settings" width={20} height={20}/>
+                <div style={{width: "1.3vw",height: "1.3vw",position: "relative"}} >
+                <Image src="/Products.svg" alt="Settings" layout="fill" objectFit="contain"/>
+                </div>
                 Products
             </MenuItem>
             <MenuItem href="#">
-                <Image src="/Recurring.png" alt="Settings" width={20} height={20}/>
+                <div style={{width: "1.3vw",height: "1.3vw",position: "relative"}} >
+                <Image src="/Recurring.svg" alt="Settings" layout="fill" objectFit="contain"/>
+                </div>
                 Recurring
             </MenuItem>
             <MenuItem href="#">
-                <Image src="/Discount.png" alt="Settings" width={20} height={20}/>
+                <div style={{width: "1.3vw",height: "1.3vw",position: "relative"}} >
+                <Image src="/Discount.svg" alt="Settings" layout="fill" objectFit="contain"/>
+                </div>
                 Discount
             </MenuItem>
         </Menu>
