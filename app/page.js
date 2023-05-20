@@ -1,11 +1,15 @@
+"use client"
+
 import Image from 'next/image'
 import styles from './page.module.css'
 import { styled } from 'styled-components';
 
 const Button = styled.a`
     width: 17.32vw;
+    text-decoration: none;
     height: 4.1vw;
-    background: #F5F5F5;
+    background: black;
+    color: white;
     border-radius: 0.99vw;
     display: flex;
     flex-direction: row;
